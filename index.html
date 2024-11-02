@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Library</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="searchBar">
+                <form action="#">
+                    <img src="images/magnify.svg" style="opacity: 07;" width="25px" height="25px">
+                    <input type="text">
+                </form>
+                <a href="#" class="notification">
+                    <img src="images/bell-ring-outline.svg" width="25px" height="25px">
+                    <div>
+                        <img src="images/dog.svg" width="30px" height="40px">
+                        John Doe
+                    </div>
+                </a>
+            </div>
+            <div class="profileBar">
+                <div class="identity">
+                    <img src="images/dog.svg" width="50px" height="50px">
+                    <div>
+                        <p>Hello there,</p>
+                        <p>John Doe</p>
+                    </div>
+                </div>
+                <div>
+                    <button id="addBook">Add Book</button>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <p>My Books</p>
+        </div>
+        <div class="sidebar">
+            <p>Library Log</p>
+            <div class="log">
+                <div class="logInfo">
+                    <p>Total books: </p>
+                    <p class="bookCount">1</p>
+                </div>
+                <div class="logInfo">
+                    <p>Finished Books: </p>
+                    <p class="finishedBooks">1</p>
+                </div>
+                <div class="logInfo">
+                    <p>Books being read: </p>
+                    <p class="booksInProgress">0</p>
+                </div>
+                <div class="logInfo">
+                    <p>Books not started: </p>
+                    <p class="booksNotStarted">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">Copyright &copy; Dawit Muluken 2024</div>
+    </div>
+    <dialog id="addDialog">
+        <button id="addClose"><img src="images/close.svg"></button>
+        <form action="#" method="dialog" class="dialogForm">
+            <div>
+                <p>Add New Book</p>
+
+            </div>
+            <label>
+                Book Title*
+                <input type="text" placeholder="Title" id="addTitle" required>
+            </label>
+            <label>
+                Author*
+                <input type="text" placeholder="Author" id="addAuthor" required>
+            </label>
+            <label>
+                Number of Pages*
+                <input type="number" placeholder="pages" id="addPages" required>
+            </label>
+            <label>
+                Publication Date*
+                <input type="date" placeholder="yyyy-mm-dd" id="addPublication" required>
+            </label>
+            <label>
+                Reading Status
+                <select name="status" id="addStatus" required>
+                    <option value="notStarted">Not Started</option>
+                    <option value="reading">Reading Currently</option>
+                    <option value="finished">Finished</option>
+                </select>
+            </label>
+            <div>
+                <button type="submit" id="addSubmit">Add Book</button>
+                <button type="reset" id="clear">Clear</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="editDialog">
+        <button id="editClose"><img src="images/close.svg"></button>
+        <form action="#" method="dialog" class="dialogForm">
+            <div>
+                <p>Edit Book</p>
+
+            </div>
+            <label>
+                Book Title*
+                <input type="text" placeholder="Title" id="editTitle" required>
+            </label>
+            <label>
+                Author*
+                <input type="text" placeholder="Author" id="editAuthor" required>
+            </label>
+            <label>
+                Number of Pages*
+                <input type="number" placeholder="pages" id="editPages" required>
+            </label>
+            <label>
+                Publication Date*
+                <input type="date" placeholder="yyyy-mm-dd" id="editPublication" required>
+            </label>
+            <label>
+                Reading Status
+                <select name="status" id="editStatus" required>
+                    <option value="notStarted">Not Started</option>
+                    <option value="reading">Reading Currently</option>
+                    <option value="finished">Finished</option>
+                </select>
+            </label>
+            <div>
+                <button type="submit" id="editSubmit">Edit Book</button>
+                <button type="reset" id="clear">Clear</button>
+            </div>
+        </form>
+    </dialog>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
